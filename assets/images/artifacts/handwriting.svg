@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7EBD4"/>
+      <stop offset="100%" stop-color="#D9C09A"/>
+    </linearGradient>
+  </defs>
+  <rect x="28" y="18" width="200" height="220" rx="12" fill="url(#paper)" stroke="#9A6B3F" stroke-width="5"/>
+  <path d="M52 66 C94 40 150 96 190 58" fill="none" stroke="#3A2A20" stroke-width="8" stroke-linecap="round"/>
+  <path d="M50 96 C108 78 168 112 202 92" fill="none" stroke="#3A2A20" stroke-width="7" stroke-linecap="round"/>
+  <path d="M54 128 C116 112 150 150 192 126" fill="none" stroke="#3A2A20" stroke-width="7" stroke-linecap="round"/>
+  <path d="M62 164 C118 150 156 178 186 164" fill="none" stroke="#3A2A20" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="184" cy="186" r="28" fill="#C41A1A" opacity="0.92"/>
+  <text x="184" y="194" text-anchor="middle" font-family="serif" font-size="22" font-weight="700" fill="#FFFCF7">手迹</text>
+</svg>
