@@ -7,9 +7,9 @@ window.GAME_CRAFTS = [
     instruction: "按制作步骤，把正确的材料拖入中央制作区。",
     reward: "山野布衣 · 寻访档案",
     steps: [
-      { id: "page", label: "第一步：理页", materialId: "page", materialLabel: "泛黄档案页", materialIcon: "📄", materialImage: "assets/images/p0/泛黄档案页.png", dropLabel: "整理档案内页" },
+      { id: "page", label: "第一步：理页", materialId: "page", materialLabel: "泛黄档案页", materialIcon: "📄", materialImage: "assets/images/p0/泛黄档案页.webp", dropLabel: "整理档案内页" },
       { id: "brush", label: "第二步：誊录", materialId: "brush", materialLabel: "旧毛笔", materialIcon: "🖌️", materialImage: "assets/images/p0/旧毛笔.webp", dropLabel: "誊抄寻访名录" },
-      { id: "ink", label: "第三步：研墨", materialId: "ink", materialLabel: "墨盒", materialIcon: "⚫", materialImage: "assets/images/p0/墨盒.png", dropLabel: "研磨墨汁" },
+      { id: "ink", label: "第三步：研墨", materialId: "ink", materialLabel: "墨盒", materialIcon: "⚫", materialImage: "assets/images/p0/墨盒.webp", dropLabel: "研磨墨汁" },
       { id: "weight", label: "第四步：装订", materialId: "weight", materialLabel: "镇纸", materialIcon: "🧱", materialImage: "assets/images/p0/镇纸.webp", dropLabel: "压平并装订成册" }
     ]
   },
@@ -20,10 +20,10 @@ window.GAME_CRAFTS = [
     instruction: "按步骤完成令旗制作，召集四十八寨乡民。",
     reward: "乱世英豪 · 四十八寨地契",
     steps: [
-      { id: "pole", label: "第一步：立杆", materialId: "pole", materialLabel: "竹旗杆", materialIcon: "🎋", materialImage: "assets/images/p1/竹旗杆.png", dropLabel: "安插旗杆" },
-      { id: "cloth", label: "第二步：绷面", materialId: "cloth", materialLabel: "土布旗面", materialIcon: "🧵", materialImage: "assets/images/p1/旗面.png", dropLabel: "绷紧旗面" },
-      { id: "pattern", label: "第三步：饰纹", materialId: "pattern", materialLabel: "布依纹样", materialIcon: "🔷", materialImage: "assets/images/p1/布依纹样.png", dropLabel: "贴上布依纹样" },
-      { id: "rope", label: "第四步：系绳", materialId: "rope", materialLabel: "麻绳", materialIcon: "🪢", materialImage: "assets/images/p1/麻绳.png", dropLabel: "系紧令旗" }
+      { id: "pole", label: "第一步：立杆", materialId: "pole", materialLabel: "竹旗杆", materialIcon: "🎋", materialImage: "assets/images/p1/竹旗杆.webp", dropLabel: "安插旗杆" },
+      { id: "cloth", label: "第二步：绷面", materialId: "cloth", materialLabel: "土布旗面", materialIcon: "🧵", materialImage: "assets/images/p1/旗面.webp", dropLabel: "绷紧旗面" },
+      { id: "pattern", label: "第三步：饰纹", materialId: "pattern", materialLabel: "布依纹样", materialIcon: "🔷", materialImage: "assets/images/p1/布依纹样.webp", dropLabel: "贴上布依纹样" },
+      { id: "rope", label: "第四步：系绳", materialId: "rope", materialLabel: "麻绳", materialIcon: "🪢", materialImage: "assets/images/p1/麻绳.webp", dropLabel: "系紧令旗" }
     ]
   },
   {

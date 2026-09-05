@@ -8,12 +8,12 @@ window.GAME_COLLECTIONS = [
     background: "assets/images/backgrounds/prologue.jpg",
     required: 4,
     items: [
-      { id: "page", label: "泛黄档案页", icon: "📄", image: "assets/images/p0/泛黄档案页.png", x: 20, y: 38 },
+      { id: "page", label: "泛黄档案页", icon: "📄", image: "assets/images/p0/泛黄档案页.webp", x: 20, y: 38 },
       { id: "brush", label: "旧毛笔", icon: "🖌️", image: "assets/images/p0/旧毛笔.webp", x: 72, y: 22 },
-      { id: "ink", label: "墨盒", icon: "⚫", image: "assets/images/p0/墨盒.png", x: 38, y: 68 },
+      { id: "ink", label: "墨盒", icon: "⚫", image: "assets/images/p0/墨盒.webp", x: 38, y: 68 },
       { id: "weight", label: "镇纸", icon: "🧱", image: "assets/images/p0/镇纸.webp", x: 82, y: 74 },
-      { id: "lamp", label: "煤油灯", icon: "🏮", image: "assets/images/p0/煤油灯.png", x: 56, y: 32, decoy: true },
-      { id: "badge", label: "旧徽章", icon: "⭐", image: "assets/images/p0/旧徽章.png", x: 12, y: 16, decoy: true }
+      { id: "lamp", label: "煤油灯", icon: "🏮", image: "assets/images/p0/煤油灯.webp", x: 56, y: 32, decoy: true },
+      { id: "badge", label: "旧徽章", icon: "⭐", image: "assets/images/p0/旧徽章.webp", x: 12, y: 16, decoy: true }
     ]
   },
   {
@@ -24,11 +24,11 @@ window.GAME_COLLECTIONS = [
     background: "assets/images/backgrounds/chapter-1.jpg",
     required: 4,
     items: [
-      { id: "pole", label: "竹旗杆", icon: "🎋", image: "assets/images/p1/竹旗杆.png", x: 22, y: 62 },
-      { id: "cloth", label: "土布旗面", icon: "🧵", image: "assets/images/p1/旗面.png", x: 74, y: 30 },
-      { id: "pattern", label: "布依纹样", icon: "🔷", image: "assets/images/p1/布依纹样.png", x: 44, y: 18 },
-      { id: "rope", label: "麻绳", icon: "🪢", image: "assets/images/p1/麻绳.png", x: 82, y: 72 },
-      { id: "pot", label: "陶罐", icon: "🏺", image: "assets/images/p1/陶罐.png", x: 62, y: 55, decoy: true }
+      { id: "pole", label: "竹旗杆", icon: "🎋", image: "assets/images/p1/竹旗杆.webp", x: 22, y: 62 },
+      { id: "cloth", label: "土布旗面", icon: "🧵", image: "assets/images/p1/旗面.webp", x: 74, y: 30 },
+      { id: "pattern", label: "布依纹样", icon: "🔷", image: "assets/images/p1/布依纹样.webp", x: 44, y: 18 },
+      { id: "rope", label: "麻绳", icon: "🪢", image: "assets/images/p1/麻绳.webp", x: 82, y: 72 },
+      { id: "pot", label: "陶罐", icon: "🏺", image: "assets/images/p1/陶罐.webp", x: 62, y: 55, decoy: true }
     ]
   },
   {
