@@ -23,7 +23,7 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 .game { position: relative; width: 100%; height: 100svh; min-height: 38rem; overflow: hidden; isolation: isolate; }
 .backdrop { position: absolute; inset: 0; z-index: -2; overflow: hidden; background: linear-gradient(145deg, #314945, #101b1b 60%, #0a1010); }
-.backdrop-image { position: absolute; inset: -2%; background-image: linear-gradient(180deg, rgba(10,18,18,.05), rgba(10,18,18,.32) 55%, rgba(10,18,18,.88)), var(--scene-image, url("assets/nongran-mountains.png")); background-size: cover; background-position: center; transform: scale(1.03); transition: filter 1.2s ease, transform 6s ease, background-position 2s ease, opacity .45s ease; }
+.backdrop-image { position: absolute; inset: -2%; background-image: linear-gradient(180deg, rgba(10,18,18,.05), rgba(10,18,18,.32) 55%, rgba(10,18,18,.88)), var(--scene-image, url("assets/nongran-mountains.webp")); background-size: cover; background-position: center; transform: scale(1.03); transition: filter 1.2s ease, transform 6s ease, background-position 2s ease, opacity .45s ease; }
 .game[data-atmosphere="archive"] .backdrop-image { filter: sepia(.34) brightness(.7) saturate(.75); transform: scale(1.07); }
 .game[data-atmosphere="dusk"] .backdrop-image { filter: brightness(.56) saturate(.75) hue-rotate(-8deg); background-position: 58% center; }
 .game[data-atmosphere="night"] .backdrop-image { filter: brightness(.34) saturate(.55) hue-rotate(12deg); transform: scale(1.09); }

@@ -45,18 +45,18 @@ const Q = (title, detail, progress) => ({ title, detail, progress });
 const N = (id, chapter, speaker, role, text, next, extra = {}) => ({ id, chapter, speaker, role, text, next, ...extra });
 
 const sceneImages = {
-  '弄染村口': 'assets/scene-village-gate.png',
-  '寨口路牌': 'assets/scene-village-gate.png',
-  '老屋外 · 晒谷场': 'assets/scene-old-yard.png',
-  '老屋旁 · 公共院落': 'assets/scene-archive-courtyard.png',
-  '村广场 · 时间绳': 'assets/scene-village-square.png',
-  '村口研学板': 'assets/scene-village-gate.png'
+  '弄染村口': 'assets/scene-village-gate.webp',
+  '寨口路牌': 'assets/scene-village-gate.webp',
+  '老屋外 · 晒谷场': 'assets/scene-old-yard.webp',
+  '老屋旁 · 公共院落': 'assets/scene-archive-courtyard.webp',
+  '村广场 · 时间绳': 'assets/scene-village-square.webp',
+  '村口研学板': 'assets/scene-village-gate.webp'
 };
 
 const characterImages = {
-  '石伯': { src: 'assets/character-shibo.png', side: 'left' },
-  '兰婆': { src: 'assets/character-lanpo.png', side: 'right' },
-  '周伯': { src: 'assets/character-zhoubo.png', side: 'left' }
+  '石伯': { src: 'assets/character-shibo.webp', side: 'left' },
+  '兰婆': { src: 'assets/character-lanpo.webp', side: 'right' },
+  '周伯': { src: 'assets/character-zhoubo.webp', side: 'left' }
 };
 
 const story = [
@@ -408,7 +408,7 @@ function speakerInitial(name = '') {
 }
 
 function applyScene(sceneName) {
-  const src = sceneImages[sceneName] || 'assets/nongran-mountains.png';
+  const src = sceneImages[sceneName] || 'assets/nongran-mountains.webp';
   els.game.style.setProperty('--scene-image', `url("${src}")`);
 }
 
@@ -573,8 +573,17 @@ document.addEventListener('keydown', event => {
 });
 
 els.autoButton.setAttribute('aria-pressed', String(state.auto));
-Object.values(sceneImages).concat(Object.values(characterImages).map(item => item.src)).forEach(src => {
-  const image = new Image();
-  image.src = src;
-});
+function preloadStoryAssets() {
+  const sources = new Set(Object.values(sceneImages).concat(Object.values(characterImages).map(item => item.src)));
+  sources.forEach(src => {
+    const image = new Image();
+    image.decoding = 'async';
+    image.src = src;
+  });
+}
+
+window.addEventListener('load', () => {
+  if ('requestIdleCallback' in window) window.requestIdleCallback(preloadStoryAssets);
+  else window.setTimeout(preloadStoryAssets, 300);
+}, { once: true });
 showStart();
