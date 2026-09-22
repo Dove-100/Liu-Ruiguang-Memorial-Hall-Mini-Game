@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101b1b" />
+  <meta name="description" content="《弄染之约》是一款依据公开史料制作的陆瑞光生平数字研学对话游戏。" />
+  <title>弄染之约｜陆瑞光数字研学游戏</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101b1b'/%3E%3Cpath d='M11 45L27 20l8 13 6-9 12 21z' fill='%23d9c7a0'/%3E%3Ccircle cx='46' cy='17' r='6' fill='%23a64235'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="game" class="game" aria-live="polite">
+    <div class="backdrop" aria-hidden="true">
+      <div class="backdrop-image"></div>
+      <div class="mist mist-a"></div>
+      <div class="mist mist-b"></div>
+      <div class="grain"></div>
+    </div>
+
+    <section id="start-screen" class="start-screen screen is-active" aria-labelledby="game-title">
+      <div class="start-mark" aria-hidden="true"><span>弄</span><i></i><span>染</span></div>
+      <div class="start-copy">
+        <p class="kicker">陆瑞光纪念馆 · 数字研学剧情</p>
+        <h1 id="game-title">弄染之约</h1>
+        <p class="start-question">一个日期之前，是怎样的一生？</p>
+        <p class="start-note">三章对话调查 · 约 20 分钟</p>
+        <div class="start-actions">
+          <button id="continue-button" class="primary-button" type="button" hidden>继续走访</button>
+          <button id="new-button" class="secondary-button" type="button">开始故事</button>
+        </div>
+      </div>
+      <p class="history-boundary">历史人物不使用虚构对白；角色“石伯、兰婆、周伯”为当代虚构讲述者。</p>
+    </section>
+
+    <section id="story-screen" class="story-screen screen" aria-label="剧情场景">
+      <header class="hud">
+        <div class="chapter-chip">
+          <span id="chapter-number">序章</span>
+          <strong id="chapter-title">村口的三个问题</strong>
+        </div>
+        <div class="hud-actions">
+          <button id="notebook-button" class="icon-button" type="button" aria-label="打开走访手册"><span aria-hidden="true">册</span></button>
+          <button id="auto-button" class="icon-button" type="button" aria-pressed="false" aria-label="自动播放"><span aria-hidden="true">自</span></button>
+          <button id="home-button" class="icon-button" type="button" aria-label="返回标题"><span aria-hidden="true">返</span></button>
+        </div>
+      </header>
+
+      <aside class="quest-panel" aria-label="当前任务">
+        <span>当前调查</span>
+        <strong id="quest-title">来到村口</strong>
+        <p id="quest-detail">查看研学板上的三个问题</p>
+        <div class="quest-progress"><i id="quest-progress-bar"></i></div>
+      </aside>
+
+      <div class="location-card">
+        <span id="location-time">今天 · 清晨</span>
+        <strong id="location-name">弄染村口</strong>
+      </div>
+
+      <div id="evidence-toast" class="evidence-toast" role="status" aria-live="assertive">
+        <span>新线索</span>
+        <strong id="evidence-toast-title"></strong>
+      </div>
+
+      <div id="chapter-card" class="chapter-card" hidden>
+        <span id="chapter-card-index">第一章</span>
+        <h2 id="chapter-card-title">两个身份，同一个人</h2>
+        <p id="chapter-card-copy"></p>
+        <button id="chapter-card-button" class="primary-button" type="button">进入本章</button>
+      </div>
+
+      <img id="character-art" class="character-art" alt="" draggable="false" hidden />
+
+      <div id="choice-list" class="choice-list" aria-label="对话选项"></div>
+
+      <section id="dialogue-panel" class="dialogue-panel" aria-label="对话框">
+        <div class="speaker-seal" aria-hidden="true"><span id="speaker-initial">访</span></div>
+        <div class="dialogue-content">
+          <div class="speaker-line">
+            <strong id="speaker-name">研学者 · 你</strong>
+            <span id="speaker-role">当代来访者</span>
+            <span id="source-tag" class="source-tag">游戏叙事</span>
+          </div>
+          <p id="dialogue-text"></p>
+          <button id="advance-button" class="advance-button" type="button" aria-label="继续对话">
+            <span>继续</span><i aria-hidden="true"></i>
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <section id="end-screen" class="end-screen screen" aria-labelledby="end-title">
+      <div class="end-content">
+        <p class="kicker">走访手册 · 已完成</p>
+        <h2 id="end-title">一个日期，重新连成了一生</h2>
+        <div class="answer-grid">
+          <article><span>01</span><h3>他从哪里来？</h3><p>从军阀混战与苛捐杂税笼罩下的镇宁乡里走来；既是地方农民武装首领，也曾身处地方保安体系。</p></article>
+          <article><span>02</span><h3>为何选择结盟？</h3><p>红军的民族政策与纪律消除疑虑，双方在反对军阀压迫和苛捐杂税上找到了共同主张。</p></article>
+          <article><span>03</span><h3>选择通向哪里？</h3><p>通向照料、联络和持续斗争，也通向被捕与牺牲；1989年，他被追认为革命烈士。</p></article>
+        </div>
+        <p class="end-quote">“选择之后，还有行动、代价和后人的纪念。”</p>
+        <div class="end-actions">
+          <button id="review-button" class="primary-button" type="button">查看走访手册</button>
+          <button id="replay-button" class="secondary-button" type="button">重新开始</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="notebook-dialog" class="notebook-dialog">
+    <div class="notebook-shell">
+      <header>
+        <div><span>FIELD NOTES</span><h2>走访手册</h2></div>
+        <button id="notebook-close" class="close-button" type="button" aria-label="关闭走访手册">×</button>
+      </header>
+      <nav class="notebook-tabs" aria-label="手册分类">
+        <button class="is-active" type="button" data-tab="evidence">已获线索</button>
+        <button type="button" data-tab="timeline">时间线</button>
+        <button type="button" data-tab="sources">资料依据</button>
+      </nav>
+      <div id="notebook-content" class="notebook-content"></div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
